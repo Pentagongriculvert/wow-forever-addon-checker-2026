@@ -1,0 +1,17 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net8.0-windows</TargetFramework>
+    <UseWPF>true</UseWPF>
+    <UseWindowsForms>true</UseWindowsForms>
+    <Nullable>disable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <RootNamespace>WoWAddonChecker</RootNamespace>
+    <AssemblyName>WoWAddonChecker</AssemblyName>
+    <Authors>AddonChecker Contributors</Authors>
+    <Company>AddonChecker Contributors</Company>
+    <Version>1.0.0</Version>
+  </PropertyGroup>
+
+</Project>

@@ -1,0 +1,36 @@
+<Window x:Class="WoWAddonChecker.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="WoW Forever Addon Compatibility Checker"
+        Height="540"
+        Width="860"
+        Background="#121212">
+    <Grid>
+        <TabControl x:Name="MainTabControl">
+            <TabItem Header="Scanner">
+                <Grid Margin="10">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="Auto" />
+                        <RowDefinition Height="Auto" />
+                        <RowDefinition Height="*" />
+                        <RowDefinition Height="Auto" />
+                    </Grid.RowDefinitions>
+                    <StackPanel Grid.Row="0" Orientation="Horizontal" Margin="0,0,0,8">
+                        <Button x:Name="SelectFolderButton" Content="Select Addons Folder" Click="SelectFolderButton_Click" Width="180" />
+                        <Button x:Name="ScanButton" Content="Scan" Click="ScanButton_Click" Width="120" Margin="8,0,0,0" />
+                    </StackPanel>
+                    <DataGrid x:Name="ResultsDataGrid" Grid.Row="2" AutoGenerateColumns="False" IsReadOnly="True">
+                        <DataGrid.Columns>
+                            <DataGridTextColumn Header="Name" DataPropertyBinding="{Binding Name}" />
+                            <DataGridTextColumn Header="TOC Path" DataPropertyBinding="{Binding TocPath}" />
+                            <DataGridTextColumn Header="Interface Version" DataPropertyBinding="{Binding InterfaceVersion}" />
+                            <DataGridTextColumn Header="Last Modified" DataPropertyBinding="{Binding LastModified}" />
+                            <DataGridTextColumn Header="Status" DataPropertyBinding="{Binding Status}" />
+                        </DataGrid.Columns>
+                    </DataGrid>
+                    <TextBlock x:Name="StatusTextBlock" Grid.Row="3" Text="Select an addons folder to start the scan." />
+                </Grid>
+            </TabItem>
+        </TabControl>
+    </Grid>
+</Window>
